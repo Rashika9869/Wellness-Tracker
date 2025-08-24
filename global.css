@@ -1,0 +1,178 @@
+tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 150 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 15% 15%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 20% 95%;
+    --secondary-foreground: 150 15% 15%;
+
+    --muted: 120 15% 96%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 120 25% 92%;
+    --accent-foreground: 150 15% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    /* Wellness color palette */
+    --wellness-50: 120 60% 97%;
+    --wellness-100: 120 50% 93%;
+    --wellness-200: 120 45% 85%;
+    --wellness-300: 120 40% 75%;
+    --wellness-400: 120 35% 60%;
+    --wellness-500: 142 76% 36%;
+    --wellness-600: 142 80% 30%;
+    --wellness-700: 142 85% 25%;
+    --wellness-800: 142 90% 20%;
+    --wellness-900: 142 95% 15%;
+
+    /* Energy/motivation colors (warm orange-yellow) */
+    --energy-50: 45 100% 97%;
+    --energy-100: 45 95% 90%;
+    --energy-200: 45 90% 80%;
+    --energy-300: 45 85% 70%;
+    --energy-400: 45 80% 60%;
+    --energy-500: 38 92% 50%;
+    --energy-600: 38 95% 45%;
+    --energy-700: 38 98% 40%;
+    --energy-800: 38 100% 35%;
+    --energy-900: 38 100% 30%;
+
+    /* Calm/peace colors (soft blue) */
+    --calm-50: 210 40% 98%;
+    --calm-100: 210 35% 94%;
+    --calm-200: 210 30% 85%;
+    --calm-300: 210 25% 75%;
+    --calm-400: 210 20% 60%;
+    --calm-500: 217 91% 60%;
+    --calm-600: 217 91% 55%;
+    --calm-700: 217 91% 50%;
+    --calm-800: 217 91% 45%;
+    --calm-900: 217 91% 40%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 15% 8%;
+    --foreground: 120 20% 95%;
+
+    --card: 150 15% 10%;
+    --card-foreground: 120 20% 95%;
+
+    --popover: 150 15% 10%;
+    --popover-foreground: 120 20% 95%;
+
+    --primary: 142 76% 45%;
+    --primary-foreground: 150 15% 8%;
+
+    --secondary: 150 15% 15%;
+    --secondary-foreground: 120 20% 95%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 120 10% 65%;
+
+    --accent: 150 15% 20%;
+    --accent-foreground: 120 20% 95%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 142 76% 45%;
+
+    /* Dark mode wellness colors */
+    --wellness-50: 120 20% 15%;
+    --wellness-100: 120 25% 18%;
+    --wellness-200: 120 30% 22%;
+    --wellness-300: 120 35% 28%;
+    --wellness-400: 120 40% 35%;
+    --wellness-500: 142 76% 45%;
+    --wellness-600: 142 76% 55%;
+    --wellness-700: 142 76% 65%;
+    --wellness-800: 142 76% 75%;
+    --wellness-900: 142 76% 85%;
+
+    /* Dark mode energy colors */
+    --energy-50: 45 50% 15%;
+    --energy-100: 45 55% 20%;
+    --energy-200: 45 60% 25%;
+    --energy-300: 45 65% 30%;
+    --energy-400: 45 70% 40%;
+    --energy-500: 38 92% 55%;
+    --energy-600: 38 92% 65%;
+    --energy-700: 38 92% 75%;
+    --energy-800: 38 92% 80%;
+    --energy-900: 38 92% 85%;
+
+    /* Dark mode calm colors */
+    --calm-50: 210 20% 15%;
+    --calm-100: 210 25% 20%;
+    --calm-200: 210 30% 25%;
+    --calm-300: 210 35% 30%;
+    --calm-400: 210 40% 40%;
+    --calm-500: 217 91% 65%;
+    --calm-600: 217 91% 70%;
+    --calm-700: 217 91% 75%;
+    --calm-800: 217 91% 80%;
+    --calm-900: 217 91% 85%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
